@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">RoomDatabase</string>
+    <string name="enter_your_first_name">enter your first name</string>
+    <string name="enter_your_last_name">enter your last name</string>
+    <string name="enter_your_age">enter your age</string>
+    <string name="enter_your_mobile_number">enter your mobile number</string>
+    <string name="enter_your_email_id">enter your email id</string>
+    <string name="no_data_found">No Data Found</string>
+</resources>

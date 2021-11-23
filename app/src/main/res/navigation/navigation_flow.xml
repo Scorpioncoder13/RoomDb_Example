@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_flow"
+    android:label="login_form"
+    app:startDestination="@id/registrationform">
+
+    <fragment
+        android:id="@+id/registrationform"
+        android:name="com.example.roomdatabase.ui.fragment.RegistrationFormFragment"
+        android:label="registrationform"
+        tools:layout="@layout/registration_form_fragment" >
+        <action
+            android:id="@+id/action_registration_to_listFragment"
+            app:destination="@id/userlisting" />
+    </fragment>
+    <action
+        android:id="@+id/action_userlisting"
+        app:popUpTo="@navigation/navigation_flow"
+        app:popUpToInclusive="true"
+        app:destination="@id/navigation_flow" />
+    <fragment
+        android:id="@+id/userlisting"
+        android:name="com.example.roomdatabase.ui.fragment.UserListingFragment"
+        android:label="userlisting" >
+        <action
+            android:id="@+id/action_listing_to_register"
+            app:popUpTo="@navigation/navigation_flow"
+            app:popUpToInclusive="true"
+            app:destination="@id/registrationform" />
+    </fragment>
+</navigation>
